@@ -35,4 +35,14 @@ document.addEventListener("DOMContentLoaded", function() {
             document.querySelector("nav ul").classList.toggle("show-nav");
         });
     }
+
+    // Change header color on click
+    const header = document.querySelector("header");
+    const colors = ["#333", "#f4a261", "#2a9d8f", "#e76f51", "#264653"];
+    let colorIndex = 0;
+
+    header.addEventListener("click", function() {
+        colorIndex = (colorIndex + 1) % colors.length;
+        header.style.backgroundColor = colors[colorIndex];
+    });
 });
